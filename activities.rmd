@@ -1,0 +1,57 @@
+---
+title: "Activities"
+author: "André Luiz Cunha"
+date: "5/3/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tibble)
+```
+
+# Orientados
+
+## Pós-graduação
+
+```{r pos}
+
+df <- tribble(
+  ~id, ~name, ~level, ~start, ~end, ~title,
+  "10854033", "Helena Stein Stefani", "mestrado", "1/3/2018", "em andamento", 
+    "Método de previsão de fluxo de tráfego em rodovias urbanas a partir de dados de velocidade de fontes online",
+  
+  "11359262", "Paola Yumi Matsumoto", "mestrado", "27/2/2019", "em andamento", 
+    "Calibração de Modelo Cellular Automata para Simulação do Comportamento do Tráfego Veicular em Rodovias Paulistas",
+  
+  "7595421", "Andre Borgato Morelli", "doutorado", "2/3/2020", "em andamento", 
+    "Investigação de eficiência e resiliência em sistemas autônomos de veículos compartilhados: uma abordagem morfológica",
+  
+  "9055915", "Elaine Rodrigues Ribeiro", "doutorado", "14/7/2020", "em andamento", 
+    "Método para obtenção e análise de dados de comportamento do motociclista na corrente de tráfego",
+  
+  "5450141", "Leandro Arab Marcomini", "doutorado", "26/2/2019", "em andamento", 
+    "Proposta de elaboração de um métod de detecção e classificação de eixos de caminhões baseado em imagens de vídeo"
+  
+)
+
+knitr::kable(df, caption = "Orientados de pós-graduação")
+
+```
+
+
+## Graduação
+
+```{r grad}
+
+df <- tribble(
+  ~id, ~name, ~level, ~start, ~end, ~title,
+  "", "Helena Tanoue Vizioli", "TCC-1", "3/5/2021", "em andamento", 
+    "Implementação de controle de velociade limite variável na Rodovia dos Bandeirantes",
+  
+  
+)
+
+knitr::kable(df, caption = "Orientados de graduação")
+
+```
