@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tibble)
+library(dplyr)
 ```
 
 # Orientados
@@ -46,12 +47,32 @@ knitr::kable(df, caption = "Orientados de pós-graduação")
 
 df <- tribble(
   ~id, ~name, ~level, ~start, ~end, ~title,
-  "", "Helena Tanoue Vizioli", "TCC-1", "3/5/2021", "em andamento", 
+   7030024, "Helena Tanoue Vizioli", "TCC-1", "3/5/2021", "em andamento", 
     "Implementação de controle de velociade limite variável na Rodovia dos Bandeirantes",
   
+  10311743, "Henrique Luiz Shibata Gino", "TCC-1", "10/5/2021", "em andamento", 
+    "Proposta de modelo operacional para viagens de ônibus intermunicipais durante a pandemia da COVID-19",
   
+  10311444, "Eraldo Dias de Castro Neto", "TCC-1", "10/5/2021", "em andamento", 
+    "Projeto de ciclovia energeticamente confortável ao usuário para a cidade de São Carlos",
+  
+  9866614, "Láisla Beatriz de Carvalho Penido", "TCC-1", "10/5/2021", "em andamento", 
+    "Análise de viabilidade da implementação de um sistema de parcel locker na cidade de Campinas/SP",
+  
+  9314198, "Pedro Victor Alves Barbosa", "Estágio", "15/2/2021", "em andamento", 
+    "McKinsey & Company, Inc. do Brasil Consultoria Ltda",
+  
+  10311444, "Eraldo Dias de Castro Neto", "Estágio", "3/3/2021", "em andamento", 
+    "HB12 SPE Empreendimentos Imobiliários Ltda",
+  
+  9003462, "Isabela Sarkis Cardoso", "Estágio", "4/1/2021", "em andamento",
+  "B2W Companhia Digital",
+  
+  10311830, "Edmar Pereira dos Santos Filho", "Estágio", "19/1/2021", "em andamento",
+  "RUMO Malha Norte Filial São Paulo"
 )
+df$start <- as.Date(df$start, format = "%d/%m/%Y")
 
-knitr::kable(df, caption = "Orientados de graduação")
+knitr::kable(df %>% arrange(level, name), caption = "Orientados de graduação")
 
 ```
