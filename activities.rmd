@@ -69,7 +69,10 @@ df <- tribble(
   "B2W Companhia Digital",
   
   10311830, "Edmar Pereira dos Santos Filho", "Estágio", "19/1/2021", "em andamento",
-  "RUMO Malha Norte Filial São Paulo"
+  "RUMO Malha Norte Filial São Paulo",
+  
+  9808296, "Gabriel Passos Bandeira", "TCC", "11/05/2021", "em andamento",
+  "Análise do impacto da testagem populacional na disseminação da COVID-19 na cidade de Ribeirão Preto no primeiro semestre de 2021"
 )
 df$start <- as.Date(df$start, format = "%d/%m/%Y")
 
